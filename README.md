@@ -6,6 +6,7 @@ some notes and lab projects for the well-known CSAPP book and lectures
 
 - Title: Computer Systems: A Programmer's Perspective (3rd Edition) 
 - Authors: Randal E. Bryant, David R. O’Hallaron
+- Website: http://csapp.cs.cmu.edu/3e/home.html
 
 ## Lecture Info
 
