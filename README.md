@@ -12,7 +12,6 @@ some notes and lab projects for the well-known CSAPP book and lectures
 
 - website: https://www.cs.cmu.edu/afs/cs/academic/class/15213-f15/www/schedule.html
 - videos: https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%22b96d90ae-9871-4fae-91e2-b1627b43e25e%22
-- videos (with Chinese subtitles): https://www.bilibili.com/video/BV1iW411d7hd?t=331
 
 ## Lab Info
 

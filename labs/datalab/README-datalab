@@ -75,8 +75,8 @@ README		   This file.
 src/		   Contains all source files for the lab.
 datalab-handout/   Handout directory that goes to the students. Generated
 		   by the Makefile from files in ./src. Never modify anything
-		   in this directory. 
-grade/		   Autograding scripts that instructors can use to 
+		   in this directory.
+grade/		   Autograding scripts that instructors can use to
 		   grade student handins.
 writeup/	   Sample Latex lab writeup.
 contest/           Everything needed for the optional "Beat the Prof" contest.
@@ -98,12 +98,12 @@ The default ./src/selections.c comes from a previous instance of the
 Data Lab at CMU.  The file ./src/selections-all.c contains the
 complete list of puzzles to choose from.
 
-Step 2. Modify the Latex lab writeup in ./writeup/datalab.tex to 
-tailor it for your course. 
+Step 2. Modify the Latex lab writeup in ./writeup/datalab.tex to
+tailor it for your course.
 
 Step 3. Type the following in the current directory:
      unix> make clean
-     unix> make 
+     unix> make
 
 The Makefile generates the btest source files, builds the dlc binary
 (if necessary), formats the lab writeup, and then copies btest, the
