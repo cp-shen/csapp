@@ -143,7 +143,9 @@ NOTES:
  *   Rating: 1
  */
 int bitXor(int x, int y) {
-  return 2;
+  int p = x & ~y;
+  int q = ~x & y;
+  return ~(~p & ~q);
 }
 /* 
  * tmin - return minimum two's complement integer 
@@ -152,9 +154,7 @@ int bitXor(int x, int y) {
  *   Rating: 1
  */
 int tmin(void) {
-
-  return 2;
-
+  return 0x8 << 28;
 }
 //2
 /*
@@ -165,7 +165,11 @@ int tmin(void) {
  *   Rating: 1
  */
 int isTmax(int x) {
-  return 2;
+  int y = x + 1;
+  int z = x + y;
+  int a = z + !y;
+  int b = ~a;
+  return !b;
 }
 /* 
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
@@ -176,7 +180,14 @@ int isTmax(int x) {
  *   Rating: 2
  */
 int allOddBits(int x) {
-  return 2;
+  int a = 0xaa;
+  int b;
+  a += 0xaa << 8; // 0xaaaa
+  a += 0xaa << 16; // 0xaaaaaa
+  a += 0xaa << 24; // 0xaaaaaaaa
+  b = x & a;
+  b = b ^ a;
+  return !b;
 }
 /* 
  * negate - return -x 
@@ -186,7 +197,9 @@ int allOddBits(int x) {
  *   Rating: 2
  */
 int negate(int x) {
-  return 2;
+  int y = ~x;
+  y = y + 1;
+  return y;
 }
 //3
 /* 
@@ -199,7 +212,9 @@ int negate(int x) {
  *   Rating: 3
  */
 int isAsciiDigit(int x) {
-  return 2;
+  int y = x + (~0x30 + 1);
+
+  return !(y >> 3) | !(y ^ 8) | !(y ^ 9);
 }
 /* 
  * conditional - same as x ? y : z 
@@ -209,6 +224,7 @@ int isAsciiDigit(int x) {
  *   Rating: 3
  */
 int conditional(int x, int y, int z) {
+  //TODO
   return 2;
 }
 /* 
